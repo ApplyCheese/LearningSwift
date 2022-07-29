@@ -1,6 +1,6 @@
 
 
-/// No Round removal of decimal places. MaxDecimals is where you want to cut the number off at.
+/// No Round removal of decimal places. MaxDecimals is where you want to cut the number off after.
 func noRound(_ a: Double, maxDecimals max: Int) -> Double {
     let stringArr = String(a).split(separator: ".")
     let decimals = Array(stringArr[1])
