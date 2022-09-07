@@ -56,6 +56,6 @@ enum Vibration {
 /*
  usage:
  
- Vibrate.heavy.vibrate()
+ Vibration.heavy.vibrate()
  
  */
