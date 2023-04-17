@@ -1,1 +1,25 @@
+// EXAMPLE OF SUBSCRIBER USING MAP AND SINK
+  init(){
+       // price_subscriber()
+    }
 
+    
+    // MARK: SUBSCRIBERS
+    
+//    func price_subscriber(){
+//
+//        $price
+//            .map({ priceupdate -> String in
+//                // characters to be removed
+//                let text: Set<Character> = [","]
+//                let removedCommas = priceupdate.filter { !text.contains($0) }
+//                let newValue = removedCommas.separated(startingindex: .trailing)
+//
+//                return newValue
+//            }) // map
+//            .sink {[weak self] (newValue) in
+//                self!.property.price = newValue
+//            } // sink
+//            .store(in: &cancellables)
+//
+//    } // price_subscriber
