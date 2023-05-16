@@ -1,9 +1,14 @@
 
 import Foundation
 
+protocol Onomable{
+    var onoma: Onomata {get}
+}
+
 enum OnomaDataError: Error{
     case OnomataNotEqual
 }
+
 struct Combining<T>{
     let combine: (T,T) -> T
 } // Combining
