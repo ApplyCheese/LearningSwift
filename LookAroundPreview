@@ -1,0 +1,29 @@
+//MARK: LOOK AROUND VIEW
+extension Content_View{
+    var lookAroundView: some View{
+        LookAroundPreview(initialScene: lookAroundScene, allowsNavigation: true)
+            .overlay(alignment: .bottomTrailing){
+                HStack {
+                    Text("\(selectedResult?.name ?? "no name")")
+                    
+                } //  HStack
+                .font(.caption)
+                .foregroundStyle(.white)
+                .padding(10)
+            }
+    } // lookAroundView
+    
+    func getLookAroundScene() {
+        lookAroundScene = nil
+        Task{
+            let request = MKLookAroundSceneRequest(mapItem: selectedResult!)
+            lookAroundScene = try? await request.scene
+        } //  Task
+    } //  getLookAroundScene
+    
+} //  Content_View
+
+// USED IN CONTENT_VIEW 
+@State private var lookAroundScene: MKLookAroundScene?
+@State var selectedResult: MKMapItem?
+getLookAroundScene()
